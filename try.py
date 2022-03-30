@@ -24,7 +24,7 @@ set_matplotlib_formats("svg")
 RANDOM_SEED = 27
 SAVE_DIR = "./models/"
 
-tracks_df = pd.read_csv("jan_2021_match_id.csv")
+tracks_df = pd.read_csv("./datapoc/jan_2021_match_id.csv", sep=';',encoding='iso-8859-1')
 
 print(
     f'{100 * len(tracks_df[(tracks_df["PRODUCT_NAME"].isna()) & (~tracks_df["traname"].isna())]) / len(tracks_df):.2f}% of dataset will be lost to missing id'
